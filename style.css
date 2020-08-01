@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    background: #2a363b;
+  }
+  
+  .heart {
+    width: 120px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .heart-piece {
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background: red;
+  }
+  
+  .heart-piece:nth-child(1),
+  .heart-piece:nth-child(9) {
+    animation: piece-1 3.2s infinite;
+    animation-delay: 0s;
+  }
+  
+  .heart-piece:nth-child(2),
+  .heart-piece:nth-child(8) {
+    animation: piece-2 3.2s infinite;
+    animation-delay: 0.15s;
+  }
+  
+  .heart-piece:nth-child(3),
+  .heart-piece:nth-child(7) {
+    animation: piece-3 3.2s infinite;
+    animation-delay: 0.30s;
+  }
+  
+  .heart-piece:nth-child(4),
+  .heart-piece:nth-child(6) {
+    animation: piece-4 3.2s infinite;
+    animation-delay: 0.45s;
+  }
+  
+  .heart-piece:nth-child(5) {
+    animation: piece-5 3.2s infinite;
+    animation-delay: 0.60s;
+  }
+  
+  .heart-piece:nth-child(1) { left: 0; }
+  .heart-piece:nth-child(2) { left: 16px; }
+  .heart-piece:nth-child(3) { left: 32px; }
+  .heart-piece:nth-child(4) { left: 48px; }
+  .heart-piece:nth-child(5) { left: 64px; }
+  .heart-piece:nth-child(6) { left: 80px; }
+  .heart-piece:nth-child(7) { left: 96px; }
+  .heart-piece:nth-child(8) { left: 112px; }
+  .heart-piece:nth-child(9) { left: 128px; }
+  
+  @keyframes piece-5 {
+    0%, 10%, 90%, 100% { height: 10px; top: -5px; }
+    45%, 55% { height: 94px; top: -23px; }
+  }
+  
+  @keyframes piece-4 {
+    0%, 10%, 90%, 100% { height: 10px; top: -5px; }
+    45%, 55% { height: 90px; top: -31px; }
+  }
+  
+  @keyframes piece-3 {
+    0%, 10%, 90%, 100% { height: 10px; top: -5px; }
+    45%, 55% { height: 80px; top: -37px; }
+  }
+  
+  @keyframes piece-2 {
+    0%, 10%, 90%, 100% { height: 10px; top: -5px; }
+    45%, 55% { height: 60px; top: -31px; }
+  }
+  
+  @keyframes piece-1 {
+    0%, 10%, 90%, 100% { height: 10px; top: -5px; }
+    45%, 55% { height: 30px; top: -15px; }
+  }
